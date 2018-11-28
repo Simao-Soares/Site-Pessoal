@@ -1,0 +1,273 @@
+*{
+	padding: 0;
+	margin: 0;
+	/*color: white;*/
+	font-family: 'Open Sans 300', sans-serif;
+	font-weight: 300;
+}
+
+body{
+	/*para o background ficar sempre bonito*/
+	 background: url("logos/background simples.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a{
+	color: grey;
+	text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 20px;
+
+
+}
+
+.links li {
+    float: right;
+}
+
+
+.grid{
+	display: grid;
+	grid-template-columns: 20px 105px 200px 1fr 1fr 1fr 120px;
+	grid-template-rows: 200px 20px 1fr 150px 1fr 75px 1fr 20px;
+	grid-gap: 0px;
+	grid-template-areas: 
+	". . links links links . ."
+	". . . . . . ."
+	". . . . . . ."
+	". . . . . . ."
+	". . . . . . ."
+	". . . . . . ."
+	". . . . . . .";
+	grid-row-gap: 0px;
+}
+
+
+
+/*background-color: red;
+}
+.grid div:nth-child(odd){
+background-color: green;
+}*/
+
+
+.links{
+	grid-area: links;
+	justify-self: start;
+}
+
+/*FALTA CRIAR UM LINKEDIN*/
+
+.menu{
+	/*grid-area: menu;
+	justify-self: center;
+	padding: 0px;
+	padding-top: 20px;*/
+	position: fixed;
+	padding: 5pt;
+    right: 50px;
+    top: 20px;
+    align-self:left;
+
+}
+
+.download{
+	/*grid-area: download;*/
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+
+	font-size: 12pt;
+	font-weight: normal;
+	background-color: white;
+	text-align: center;
+	line-height: 75px;
+	height: 75px;
+    width: 200px;
+
+}
+
+.rodape{
+	/*grid-area: rodape;*/
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	font-size: 8pt;
+}
+
+.menu ul li ul{
+	/*grid-area: nav;*/
+    position: fixed;
+    right: 50px;
+    top: 75px;   
+}
+
+
+
+.menu ul li ul li{
+	width: 250px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	margin: 5px;
+	background-color: #696969;
+	opacity: .7;
+	display: none;	
+}
+
+
+.menu ul li ul li a{
+		text-decoration: none;
+		color: white;
+}
+
+.menu ul li ul li:hover{
+	background-color: #2f8ac6;
+	font-size: 13pt;
+}
+
+.menu ul li:hover ul li {
+	display: block;
+}
+
+.timeline{
+	color: white;
+	position: fixed;
+	top: 25px;
+	left: 50px;
+	right: 350px;
+	margin: 50px 0;
+	padding: 40px 0;
+
+}
+
+.timeline:before{
+	content: '';
+	position: fixed;
+	left: 330px;
+	width: 2px;
+	height: 1000px;
+	background: white;
+}
+
+.timeline ul{
+	margin: 0;
+	padding: 0;
+}
+
+.timeline ul li{
+	line-height: normal;
+	position: relative;
+	width: 25%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+.timeline ul li:nth-child(1){
+	position: fixed;
+	left: 20px;
+	top: 100px;
+	float: left;
+	text-align: right;
+	clear: both;
+	/*background-color: green;*/
+}
+
+.timeline ul li:nth-child(2){
+	position: fixed;
+	left: 320px;
+	top: 292px;
+	float: right;
+	text-align: left;
+	clear: both;
+	/*background-color: red;*/
+}
+
+.timeline ul li:nth-child(3){
+	position: fixed;
+	top: 470px;
+	left: 20px;
+	float: left;
+	text-align: right;
+	clear: both;
+	/*background-color: blue;*/
+}
+
+.timeline ul li:nth-child(1):before{
+	content: '';
+	position: fixed;
+	top: 114px;
+	left: 326px;
+	width: 10px;
+	height: 10px;
+	background: rgba(47, 138, 198, 1);
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(47, 138, 198, 0.2);
+}
+
+.timeline ul li:nth-child(2):before{
+	content: '';
+	position: fixed;
+	top: 307px;
+	left: 326px;
+	width: 10px;
+	height: 10px;
+	background: rgba(47, 138, 198, 1);
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(47, 138, 198, 0.5);
+}
+
+.timeline ul li:nth-child(3):before{
+	content: '';
+	position: fixed;
+	top: 486px;
+	left: 326px;
+	width: 10px;
+	height: 10px;
+	background: rgba(47, 138, 198, 1);
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(47, 138, 198, 0.5);
+}
+
+.timeline p{
+	font-size: 10pt;
+	color: #c6c4c4;
+}
+
+.timeline ul li .time1{
+	position: fixed;
+	left: 348px;
+	top: 111px;
+	float: left;
+	text-align: right;
+	clear: both;
+	color: #2f8ac6;
+
+}
+
+.timeline ul li .time2{
+	position: fixed;
+	left: 279px;
+	top: 303px;
+	float: left;
+	text-align: right;
+	clear: both;
+	color: #2f8ac6;
+}
+
+.timeline ul li .time3{
+	position: fixed;
+	left: 346px;
+	top: 482px;
+	float: left;
+	text-align: right;
+	clear: both;
+	color: rgb(10, 138, 198);
+}
+

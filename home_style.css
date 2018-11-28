@@ -1,0 +1,158 @@
+*{
+	padding: 0;
+	margin: 0;
+	/*color: white;*/
+	font-family: 'Open Sans 300', sans-serif;
+	font-weight: 300;
+}
+
+body{ 
+	/*para o background ficar sempre bonito*/
+	 background: url("logos/background3.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a{
+	color: grey;
+	text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 20px;
+
+
+}
+
+.links li {
+    float: right;
+}
+
+
+.grid{
+	display: grid;
+	grid-template-columns: 20px 105px 200px 1fr 1fr 1fr 120px;
+	grid-template-rows: 200px 20px 1fr 150px 1fr 75px 1fr 20px;
+	grid-gap: 0px;
+	grid-template-areas: 
+	". . links links links . ."
+	". . . . . . ."
+	". . . . . . ."
+	". . . . . . ."
+	". . . . . . ."
+	". . . . . . ."
+	". . . . . . .";
+	grid-row-gap: 0px;
+}
+
+
+
+/*background-color: red;
+}
+.grid div:nth-child(odd){
+background-color: green;
+}*/
+
+
+.links{
+	grid-area: links;
+	justify-self: start;
+}
+
+/*FALTA CRIAR UM LINKEDIN*/
+
+.menu{
+	/*grid-area: menu;
+	justify-self: center;
+	padding: 0px;
+	padding-top: 20px;*/
+	position: fixed;
+	padding: 5pt;
+    right: 50px;
+    top: 20px;
+    align-self:left;
+
+}
+
+.icon{
+    /*animation*/
+    animation-delay: 3s;
+    animation-duration: 5s;
+    animation-iteration-count: 3;
+
+	
+}
+
+.download{
+	/*grid-area: download;*/
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+
+
+	font-size: 12pt;
+	font-weight: normal;
+	background-color: white;
+	text-align: center;
+	line-height: 75px;
+	height: 75px;
+    width: 200px;
+
+}
+
+.rodape{
+	/*grid-area: rodape;*/
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	font-size: 8pt;
+}
+
+.menu ul li ul{
+	/*grid-area: nav;*/
+    position: fixed;
+    right: 50px;
+    top: 75px;   
+}
+
+
+
+.menu ul li ul li{
+	width: 250px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	margin: 5px;
+	background-color: #696969;
+	opacity: .7;
+	display: none;	
+}
+
+
+.menu ul li ul li a{
+		text-decoration: none;
+		color: white;
+}
+
+.menu ul li ul li:hover{
+	background-color: #2f8ac6;
+	font-size: 13pt;
+}
+
+.menu ul li:hover ul li {
+	display: block;
+}
+
+a.incon{
+	animation-duration: 2s;
+	animation-delay: 0.5s;
+}
+
+
+/* FAZER COM QUE SE ADAPTE AS DIMENSOES
+ DA JANELA OU DISPOSITIVO */
+
